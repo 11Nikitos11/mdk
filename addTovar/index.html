@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="js/app.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Меню</h1>
+        <button id="addBtn" class="btn btn-primary">Товар</button>
+        <button id="addBtn1" class="btn btn-primary">Производитель</button>
+        <button id="addBtn2" class="btn btn-primary">Категории</button>
+
+        <div id="data"></div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Добавить товар</h2>
+            <div class="form-group">
+                <label for="name">Название товара:</label>
+                <input type="text" id="name">
+            </div>
+            <div class="form-group">
+                <label for="artikul">Артикул товара:</label>
+                <input type="text" id="artikul">
+            </div>
+            <div class="form-group">
+                <label for="kategore">Категория товара:</label>
+                <input type="text" id="kategore">
+            </div>
+            <div class="form-group">
+                <label for="price">Цена товара:</label>
+                <input type="price" id="price">
+            </div>
+            <div class="form-group">
+                <label for="imeetsa">Наличие на складе:</label>
+                <select id="imeetsa">
+                    <option value="Присутствует">Присутствует</option>
+                    <option value="Отсутствует">Отсутствует</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="potrepano">Состояние:</label>
+                <select id="potrepano">
+                    <option value="Новый">Новый</option>
+                    <option value="Витринный">Витринный образец</option>
+                </select>
+            </div>
+            <button id="saveBtn" class="btn btn-primary">Сохранить</button>
+        </div>
+    </div>
+
+    <div id="myModal1" class="modal" >
+        <div class="modal-content1">
+            <span class="close1">&times;</span>
+            <h2>Добавить производителя</h2>
+            <div class="form-group1">
+                <label for="name1">Название производителя:</label>
+                <input type="text" id="name1">
+            </div>
+            <div class="form-group1">
+                <label for="phone1">Номер телефона:</label>
+                <input type="text" id="phone1">
+            </div>
+            <div class="form-group1">
+                <label for="Adres1">Адрес производителя:</label>
+                <input type="Adres" id="Adres1">
+            </div>
+            <button id="saveBtn1" class="btn btn-primary">Сохранить</button>
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal" style="display: none;">
+        <div class="modal-content2">
+            <span class="close2">&times;</span>
+            <h2>Добавить категорию</h2>
+            <div class="form-group2">
+                <label for="name2">Название категории:</label>
+                <input type="text" id="name2">
+            </div>
+            <div class="form-group2">
+                <label for="status2">Статус:</label>
+                <select id="status2">
+                    <option value="активна">активна</option>
+                    <option value="не">не активна</option>
+                </select>
+            </div>
+            <button id="saveBtn2" class="btn btn-primary">Сохранить</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
