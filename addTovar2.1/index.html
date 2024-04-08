@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление товарами на складе</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js"></script>
+
+</head>
+
+<body>
+    <h1>Управление товарами на складе</h1>
+
+
+    <div id="addCategoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addCategoryModal')">x</span>
+            <h2>Добавить категорию</h2>
+            <label for="categoryName">Название категории:</label>
+            <input type="text" id="categoryName" required><br>
+            <button onclick="addCategory()">Добавить категорию</button>
+        </div>
+    </div>
+
+
+    <div id="addManufacturerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addManufacturerModal')">x</span>
+            <h2>Добавить производителя</h2>
+            <label for="manufacturerName">Название производителя:</label>
+            <input type="text" id="manufacturerName" required><br>
+            <label for="manufacturerAddress">Адрес производителя:</label>
+            <input type="text" id="manufacturerAddress" required><br>
+            <label for="manufacturerPhone">Моб. телефон производителя:</label>
+            <input type="text" id="manufacturerPhone" required><br>
+            <button onclick="addManufacturer()">Добавить производителя</button>
+        </div>
+    </div>
+
+
+    <div id="addItemModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addItemModal')">x</span>
+            <h2>Добавить товар</h2>
+            <label for="itemName">Название товара:</label>
+            <input type="text" id="itemName" required><br>
+            <label for="itemCode">Артикул товара:</label>
+            <input type="text" id="itemCode" required><br>
+            <label for="itemCategory">Категория товара:</label>
+            <select id="itemCategory" required></select><br>
+            <label for="itemManufacturer">Производитель товара:</label>
+            <select id="itemManufacturer" required></select><br>
+            <label for="itemPrice">Цена товара:</label>
+            <input type="number" id="itemPrice" required><br>
+            <label for="itemAvailability">Наличие на складе:</label>
+            <select id="itemAvailability" required>
+                <option value="InStock">Присутствует</option>
+                <option value="OutOfStock">Отсутствует</option>
+            </select><br>
+            <label for="itemCondition">Состояние товара:</label>
+            <select id="itemCondition" required>
+                <option value="New">Новый</option>
+                <option value="Used - Excellent">Витринный образец</option>
+            </select><br>
+            <button onclick="addItem()">Добавить товар</button>
+        </div>
+    </div>
+
+
+    <div id="viewCategoriesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('viewCategoriesModal')">x</span>
+            <h2>Категории товаров</h2>
+            <ul id="categoryList"></ul>
+        </div>
+    </div>
+
+
+    <div id="viewManufacturersModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('viewManufacturersModal')">x</span>
+            <h2>Производители</h2>
+            <ul id="manufacturerList"></ul>
+        </div>
+    </div>
+
+
+    <div id="viewItemsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('viewItemsModal')">x</span>
+            <h2>Товары</h2>
+            <ul id="itemList"></ul>
+        </div>
+    </div>
+
+
+    <button id="but" onclick="openModal('addCategoryModal')">Добавить категорию</button>
+    <button id="but"onclick="openModal('addManufacturerModal')">Добавить производителя</button>
+    <button id="but" onclick="openModal('addItemModal')">Добавить товар</button>
+    <button id="but"onclick="openModal('viewCategoriesModal')">Посмотреть категорию</button>
+    <button id="but"onclick="openModal('viewManufacturersModal')">Посмотреть производителей</button>
+    <button id="but"onclick="openModal('viewItemsModal')">Посмотреть товары</button>
+</body>
+
+</html>
